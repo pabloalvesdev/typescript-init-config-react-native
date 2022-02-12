@@ -1,0 +1,79 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "airbnb",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "no-debugger":"off",
+        "react/require-default-props":"off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps":  "error",
+        "jsx-a11y/label-has-associated-control": [ "error", {
+          "required": {
+            "some": [ "nesting", "id"  ]
+          }
+        }],
+        "jsx-a11y/label-has-for": [ "error", {
+          "required": {
+            "some": [ "nesting", "id"  ]
+          }
+        }],
+        "react/function-component-definition":"off",
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": [
+          2,
+          {
+             "caseSensitive": false
+          }
+        ],
+        "prettier/prettier": "error",
+        "space-before-function-paren": "off",
+        "react/prop-types": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+        "react/react-in-jsx-scope": "off",
+        "react/react-in-tsx-scope": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "no-unused-vars": "off",
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+       ]
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"],
+            "moduleDirectory": ["node_modules", "src/"],
+            "paths": ["src"]
+          }
+        }
+      }
+}
